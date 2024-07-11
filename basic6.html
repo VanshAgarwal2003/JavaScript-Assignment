@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="leap"></p>
+
+    <script>
+        function isLeapYear(year) {
+            
+            return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+        }
+        const year = 2025;
+
+        if (isLeapYear(year)) 
+        {
+           document.getElementById("leap").innerHTML="Leap Year";
+        } 
+        else 
+        {
+            document.getElementById("leap").innerHTML="Not a leap Year";
+        }
+
+    </script>
+</body>
+
+</html>
