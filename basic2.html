@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Window Example</title>
+    <style>
+        .codingimg{
+            width:80vw;
+            height: 60vh;
+        }
+    </style>
+</head>
+<body>
+    <p>Hello Program</p>
+    <img class="codingimg" src="images/backiee-286745-landscape.jpg" alt="Coding"><br>
+
+    <button id="printbtn">Print</button>
+    <script>
+        function printimg()
+        {
+            window.print();
+        }
+        document.getElementById("printbtn").onclick=printimg;
+    </script>
+</body>
+</html>
