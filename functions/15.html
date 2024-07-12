@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="enter number" id="input1">
+    <br><br>
+    <input type="text" placeholder="enter power" id="input2">
+    <br><br>
+    <button id="btn" onclick="compute()">Calculate power</button>
+
+    <p id="result"></p>
+
+    <script>
+        function compute() 
+        {
+           let num=document.getElementById("input1").value;
+           let pow=document.getElementById("input2").value;
+
+           let res=Math.pow(num,pow);
+        document.getElementById("result").innerHTML=`The result is ${res}`;
+        }
+    </script>
+</body>
+
+</html>

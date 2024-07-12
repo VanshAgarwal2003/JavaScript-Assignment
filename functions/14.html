@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let amount=25;
+        let coins=[25,10,5,2,1];
+        let result=[];
+
+        for(let i=0;i<coins.length;i++)
+        {
+            while(amount>=coins[i])
+            {
+                result.push(coins[i]);
+                amount=amount-coins[i];
+            }
+        }
+
+        document.write(result);
+    </script>
+</body>
+</html>
