@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="order"></p>
+    <script>
+       let str="dog";
+       let result=[];
+
+       for(let i=0;i<str.length;i++)
+       {
+          for(let j=i+1;j<=str.length;j++)
+          {
+             result.push(str.substring(i,j));
+          }
+       }
+        document.getElementById("order").innerHTML=result;
+       
+    </script>
+</body>
+</html>

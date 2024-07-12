@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="alpha"></p>
+    <script>
+        let str="webmaster";
+        let array=str.split('');
+
+        array.sort();
+        let new_str;
+         
+        new_str=array.join('');
+
+        document.getElementById("alpha").innerHTML=`The string <mark>${str}</mark> in aplhabetically order is: <mark>${new_str}</mark>`;
+    </script>
+</body>
+</html>
