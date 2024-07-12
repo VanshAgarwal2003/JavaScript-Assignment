@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array=["Australia","India","Germany","United States Of America"];
+        let max_country='';
+
+        array.forEach(i=>{
+            if(i.length> max_country.length)
+            {
+               max_country=i;
+            }
+        });
+
+        document.write(`The longest name of the country is: ${max_country}`)
+    </script>
+</body>
+</html>
