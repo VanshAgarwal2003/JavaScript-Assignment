@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="date"></p>
+    <script>
+        for (let year = 2014; year <= 2050; year++) 
+        {
+            let date = new Date(year, 0, 1); 
+            if (date.getDay() === 0) 
+            {
+                document.getElementById("date").innerHTML=`1st January ${year} is a Sunday`;
+            }
+        }
+    </script>
+</body>
+
+</html>

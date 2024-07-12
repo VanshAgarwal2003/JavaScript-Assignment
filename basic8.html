@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" style="width:200px;" placeholder="Enter any number from 1-10" id="user_random" autocomplete="off">
+    <br><br>
+    <button id="submitbtn" >Submit</button>
+    <p id="random"></p>
+
+    <script>
+        function check() 
+        {
+            let randomnumber = Math.floor(Math.random() * 10) + 1;
+            let usernumber = document.getElementById("user_random").value;
+            if(randomnumber == usernumber)
+            {
+               document.getElementById("random").innerHTML="Good Work";
+            }
+            else{
+                document.getElementById("random").innerHTML="Not Matched";
+            }
+        }
+
+        document.getElementById("submitbtn").onclick = check;
+
+    </script>
+</body>
+
+</html>
