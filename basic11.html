@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+
+<body>
+    <h2>Temperature Converter</h2>
+    
+    <label for="celsius">Temperature in Celsius:</label>
+    <input type="number" id="celsius" placeholder="Enter Celsius">
+    <button onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+    <p id="fahrenheitOutput"></p>
+
+    <label for="fahrenheit">Temperature in Fahrenheit:</label>
+    <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit">
+    <button onclick="convertToCelsius()">Convert to Celsius</button>
+    
+    <p id="celsiusOutput"></p>
+
+    <script>
+        function convertToFahrenheit() {
+            let celsius = parseFloat(document.getElementById("celsius").value);
+            if (isNaN(celsius)) {
+                document.getElementById("fahrenheitOutput").innerText = "Please enter a valid number.";
+                return;
+            }
+            let fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById("fahrenheitOutput").innerText = `${celsius}°C is ${fahrenheit}°F`;
+        }
+
+        function convertToCelsius() {
+            let fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+            if (isNaN(fahrenheit)) {
+                document.getElementById("celsiusOutput").innerText = "Please enter a valid number.";
+                return;
+            }
+            let celsius = (fahrenheit - 32) * 5/9;
+            document.getElementById("celsiusOutput").innerText = `${fahrenheit}°F is ${celsius}°C`;
+        }
+    </script>
+</body>
+
+</html>
