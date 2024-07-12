@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter string" id="input"><br><br>
+    <button id="btn" onclick="get()">Get unique char</button>
+
+    <p id="res"></p>
+    <script>
+        function get()
+        {
+            let str=document.getElementById("input").value;
+            let result=[...new Set(str)];
+            document.getElementById("res").innerHTML=result;
+        }
+    </script>
+</body>
+</html>
