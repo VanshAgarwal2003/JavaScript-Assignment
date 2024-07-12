@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getSubsets(arr, subsetLength) {
+            let result = [];
+
+            function generateSubsets(currentSubset, startIndex) {
+                if (currentSubset.length === subsetLength) {
+                    result.push([...currentSubset]);
+                    return;
+                }
+
+                for (let i = startIndex; i < arr.length; i++) {
+                    currentSubset.push(arr[i]);
+                    generateSubsets(currentSubset, i + 1);
+                    currentSubset.pop();
+                }
+            }
+
+            generateSubsets([], 0);
+            return result;
+        }
+
+        let sampleArray = [1, 2, 3];
+        let subsetLength = 2;
+        let subsets = getSubsets(sampleArray, subsetLength);
+        document.write(subsets); 
+
+    </script>
+</body>
+
+</html>
