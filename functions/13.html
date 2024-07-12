@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function computeFactors(num) {
+            if (num <= 0 || !Number.isInteger(num)) 
+            {
+                return [];
+            }
+
+            let factors = [];
+            let sqrt = Math.sqrt(num);
+            for (let i = 1; i <= sqrt; i++) 
+            {
+                if (num % i === 0) 
+                {
+                    factors.push(i); 
+                    if (i !== num / i) 
+                    {
+                        factors.push(num / i); 
+                    }
+                }
+            }
+            factors.sort((a, b) => a - b);
+
+            return factors;
+        }
+        document.write(computeFactors(12));
+
+    </script>
+</body>
+
+</html>
