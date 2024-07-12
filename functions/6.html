@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str="Web Development Tutorial";
+        let array=str.split(' ');
+
+        let longest_word='';
+        array.forEach(i=>{
+            if(i.length>longest_word.length)
+            {
+                longest_word=i;
+            }
+        });
+
+        document.write(`The longest word in the <mark>${str}</mark> is: <mark>${longest_word}</mark>`)
+    </script>
+</body>
+</html>
