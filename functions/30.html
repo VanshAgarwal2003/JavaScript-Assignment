@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function name(func)
+        {
+            document.write("Name function is called");
+            func();
+            return func.name;
+        }
+        function returnName()
+        {
+             document.write("returnname function is executed");
+        }
+
+        name(returnName);
+    </script>
+</body>
+</html>
