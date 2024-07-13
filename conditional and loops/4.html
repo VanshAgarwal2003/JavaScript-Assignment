@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function five(a, b, c, d, e) {
+            let largest = a;
+
+            if (b > largest)
+            {
+                largest = b;
+            }
+            if (c > largest) {
+                largest = c;
+            }
+            if (d > largest) 
+            {
+                largest = d;
+            }
+            if (e > largest) 
+            {
+                largest = e;
+            }
+
+            alert(`The largest number is: ${largest}`);
+        }
+
+        const num1 = -5;
+        const num2 = -2;
+        const num3 = 0;
+        const num4 = -9;
+        const num5 = -1;
+        five(num1, num2, num3, num4, num5);
+
+    </script>
+</body>
+
+</html>

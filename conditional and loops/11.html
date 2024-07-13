@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findGCD(a, b) 
+        {
+            if (a <= 0 || b <= 0 || !Number.isInteger(a) || !Number.isInteger(b)) 
+            {
+                return null;
+            }
+            while (b !== 0) 
+            {
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+
+        const num1 = 24;
+        const num2 = 36;
+        const gcd = findGCD(num1, num2);
+
+        if (gcd !== null) 
+        {
+            document.write(`The GCD of ${num1} and ${num2} is: ${gcd}`);
+        }
+        else 
+        {
+            document.write("Please provide valid positive integers to find the GCD.");
+        }
+
+    </script>
+</body>
+
+</html>
