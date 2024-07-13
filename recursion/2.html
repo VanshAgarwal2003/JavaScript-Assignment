@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function gcd(a, b) 
+        {
+            while (b !== 0) 
+            {
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+
+        const num1 = 48;
+        const num2 = 18;
+        const result = gcd(num1, num2);
+
+        document.write(`The GCD of ${num1} and ${num2} is: ${result}`);
+
+    </script>
+</body>
+
+</html>

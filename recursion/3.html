@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function range(x, y) 
+        {
+            let result = [];
+
+            for (let i = x + 1; i < y; i++) {
+                result.push(i);
+            }
+
+            return result;
+        }
+
+
+        const x = 2;
+        const y = 9;
+        const integersInRange = range(x, y);
+
+        document.write(`Integers in range (${x}, ${y}):    `, integersInRange);
+
+    </script>
+</body>
+
+</html>
