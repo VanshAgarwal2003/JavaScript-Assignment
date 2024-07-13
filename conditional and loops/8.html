@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isHappyNumber(num) {
+            let seen = new Set();
+
+            while (num !== 1 && !seen.has(num)) {
+                seen.add(num);
+                num = sumOfSquaresOfDigits(num);
+            }
+
+            return num === 1;
+        }
+
+        function sumOfSquaresOfDigits(num) {
+            let sum = 0;
+            while (num > 0) {
+                let digit = num % 10;
+                sum += digit * digit;
+                num = Math.floor(num / 10);
+            }
+            return sum;
+        }
+
+        function findFirstNHappyNumbers(n) {
+            let count = 0;
+            let number = 1;
+            let happyNumbers = [];
+
+            while (count < n) {
+                if (isHappyNumber(number)) {
+                    happyNumbers.push(number);
+                    count++;
+                }
+                number++;
+            }
+
+            return happyNumbers;
+        }
+
+        const first5HappyNumbers = findFirstNHappyNumbers(5);
+        console.log("The first 5 happy numbers are:", first5HappyNumbers);
+
+    </script>
+</body>
+
+</html>
