@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function numbers(a, b, c) {
+            let array = [];
+
+            if (a >= b && a >= c) 
+            {
+                if (b >= c) {
+                    array = [c, b, a];
+                } else {
+                    array = [b, c, a];
+                }
+            } 
+            else if (b >= a && b >= c) 
+            {
+                if (a >= c) 
+                {
+                    array = [c, a, b];
+                } 
+                else 
+                {
+                    array = [a, c, b];
+                }
+            } 
+            else if (c >= a && c >= b) 
+            {
+                if (a >= b) 
+                {
+                    array = [b, a, c];
+                }
+                 else {
+                    array = [a, b, c];
+                }
+            }
+
+            alert(`The sorted order is: ${array.join(', ')}`);
+        }
+
+        const num1 = 9;
+        const num2 = 3;
+        const num3 = 5;
+        numbers(num1, num2, num3);
+
+    </script>
+</body>
+
+</html>
