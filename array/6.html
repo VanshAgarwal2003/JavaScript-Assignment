@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function dash(num) 
+        {
+            const strNum = num.toString();
+            let result = '';
+
+            for (let i = 0; i < strNum.length; i++) 
+            {
+                if (parseInt(strNum[i]) % 2 === 0 && parseInt(strNum[i + 1]) % 2 === 0) 
+                {
+                    result += strNum[i] + '-';
+                } 
+                else 
+                {
+                    result += strNum[i];
+                }
+            }
+
+            return result;
+        }
+
+        const number = 246824;
+        const dashedNumber = dash(number);
+        document.write(dashedNumber);
+
+    </script>
+</body>
+
+</html>
