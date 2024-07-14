@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function numStringRange(start, end, step) {
+            let result = [];
+            let isNumeric = !isNaN(start) && !isNaN(end);
+
+            if (isNumeric) {
+                start = parseFloat(start);
+                end = parseFloat(end);
+                for (let i = start; i <= end; i += step) {
+                    result.push(i);
+                }
+            } else {
+                start = start.charCodeAt(0);
+                end = end.charCodeAt(0);
+                for (let i = start; i <= end; i += step) {
+                    result.push(String.fromCharCode(i));
+                }
+            }
+
+            return result;
+        }
+
+        console.log(numStringRange('a', 'z', 2));
+
+    </script>
+</body>
+
+</html>
