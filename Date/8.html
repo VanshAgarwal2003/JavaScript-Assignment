@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function date(date1, date2) {
+
+            const dt1 = new Date(date1);
+            const dt2 = new Date(date2);
+
+            const diffM = Math.abs(dt1 - dt2);
+
+
+            const diff = Math.ceil(diffM / (1000 * 60 * 60 * 24));
+
+            return diff;
+        }
+
+
+        document.write(date('04/02/2014', '11/04/2014'));
+
+    </script>
+</body>
+
+</html>

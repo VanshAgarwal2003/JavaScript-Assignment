@@ -9,16 +9,15 @@
 
 <body>
     <script>
-        function is_weekend(dateString) 
+        function lastday(year, month) 
         {
-            const date = new Date(dateString);
-            const dayOfWeek = date.getDay();
-            
-            return dayOfWeek === 0 || dayOfWeek === 6;
+            const date = new Date(year, month, 0);
+            return date.getDate();
         }
 
-        document.write(is_weekend('Nov 15, 2014'));
 
+        console.log(lastday(2014, 0));
+        console.log(lastday(2014, 1));
 
     </script>
 </body>
