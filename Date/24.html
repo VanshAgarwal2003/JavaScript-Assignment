@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ISO(date) 
+        {
+            const target = new Date(date.valueOf());
+            const dayNr = (date.getDay() + 6) % 7;
+            target.setDate(target.getDate() - dayNr + 3);
+
+
+            const jan4 = new Date(target.getFullYear(), 0, 4);
+
+            const dayDiff = (target - jan4) / 86400000;
+
+
+            const weekNo = 1 + Math.ceil(dayDiff / 7);
+
+            return weekNo;
+        }
+
+
+        const dt = new Date(2015, 10, 1);
+        console.log(ISO(dt));
+
+    </script>
+</body>
+
+</html>

@@ -9,17 +9,15 @@
 
 <body>
     <script>
-        function days(date) 
+        function ISO(date) 
         {
-            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const dayIndex = date.getDay();
+            const day = date.getDay();
 
-            return days[dayIndex];
+            return day === 0 ? 7 : day;
         }
 
-
         const dt = new Date(2015, 10, 1);
-        document.write(days(dt));
+        console.log(ISO(dt));
 
     </script>
 </body>
