@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function arrayDifference(array1, array2) 
+        {
+            return array1.filter(element => !array2.includes(element));
+        }
+
+        let array1 = [1, 2, 3, 4, 5];
+        let array2 = [3, 4, 5, 6];
+
+        let difference1 = arrayDifference(array1, array2);
+        let difference2 = arrayDifference(array2, array1);
+
+        document.write("Difference of array1 - array2:", difference1);
+        document.write("Difference of array2 - array1:", difference2);
+
+    </script>
+</body>
+
+</html>
