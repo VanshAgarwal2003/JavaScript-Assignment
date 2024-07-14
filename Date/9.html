@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        function yesterday(dateString) 
+        {
+            const date = new Date(dateString);
+            date.setDate(date.getDate() - 1);
+
+            return date.toString();
+        }
+
+
+        document.write(yesterday('Nov 15, 2014'));
+        document.write(yesterday('Nov 16, 2015'));
+
+
     </script>
 </body>
+
 </html>
