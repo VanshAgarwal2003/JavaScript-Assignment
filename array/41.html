@@ -9,13 +9,13 @@
 
 <body>
     <script>
-        function arrayRange(start, length) 
+        function rangeBetween(start, end) 
         {
-            return Array.from({ length: length }, (_, index) => start + index);
+            return Array.from({ length: end - start + 1 }, (_, index) => start + index);
         }
 
-        console.log(arrayRange(1, 4));
-        console.log(arrayRange(-6, 4));
+        document.write(rangeBetween(4, 7));
+        document.write(rangeBetween(-4, 7));
 
     </script>
 </body>
