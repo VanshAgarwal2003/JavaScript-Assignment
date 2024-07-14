@@ -9,12 +9,16 @@
 
 <body>
     <script>
-        function containsElement(arr, elem) {
-            return arr.includes(elem);
+        function emptyArray(arr) 
+        {
+            arr.length = 0;
         }
 
-        console.log(containsElement([2, 5, 9, 6], 5));
-        console.log(containsElement([2, 5, 9, 6], 7));
+        var array = [1, 2, 3, 4, 5];
+        document.write("Before:"+array);
+
+        emptyArray(array);
+        document.write("After:"+array);
 
     </script>
 </body>
