@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function age(birthDate) 
+        {
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+            const dayDifference = today.getDate() - birthDate.getDate();
+
+            if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) 
+            {
+                age--;
+            }
+
+            return age;
+        }
+
+        document.write(age(new Date(1982, 11, 4)));
+
+    </script>
+</body>
+
+</html>

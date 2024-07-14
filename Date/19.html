@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>function day(date) {
+
+            const day = date.getDate();
+
+
+            return String(day).padStart(2, '0');
+        }
+
+        const d = new Date(2015, 10, 1);
+        console.log(day(d));
+
+
+    </script>
+</body>
+
+</html>
