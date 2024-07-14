@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        function get(month, year) 
+        {
+            return new Date(year, month, 0).getDate();
+        }
+
+        document.write(get(1, 2012));
+        document.write(get(2, 2012));
+
     </script>
 </body>
+
 </html>
