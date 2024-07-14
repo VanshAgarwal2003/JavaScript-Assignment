@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function max_date(dateArray) 
+        {
+            let maxDate = new Date(dateArray[0]);
+            for (let i = 1; i < dateArray.length; i++) 
+            {
+                const currentDate = new Date(dateArray[i]);
+
+                if (currentDate > maxDate) {
+                    maxDate = currentDate;
+                }
+            }
+            return maxDate.toISOString().slice(0, 10);
+        }
+
+        document.write(max_date(['2015/02/01', '2015/02/02', '2015/01/03'])); 
+
+    </script>
+</body>
+
+</html>

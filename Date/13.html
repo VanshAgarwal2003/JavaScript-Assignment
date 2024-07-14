@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function timeConvert(minutes) 
+        {
+            if (typeof minutes !== 'number' || minutes < 0) 
+            {
+                return "Invalid input. Please provide a non-negative number of minutes.";
+            }
+
+            const hours = Math.floor(minutes / 60);
+            const remainingMinutes = minutes % 60;
+
+            const hourStr = hours === 1 ? 'hour' : 'hours';
+            const minuteStr = remainingMinutes === 1 ? 'minute' : 'minutes';
+
+            return `${minutes} minutes = ${hours} ${hourStr} and ${remainingMinutes} ${minuteStr}.`;
+        }
+
+
+        console.log(timeConvert(200));
+
+    </script>
+</body>
+
+</html>
