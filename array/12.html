@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sumAndProduct(arr) 
+        {
+            let sum = 0;
+            let product = 1;
+            for (let i = 0; i < arr.length; i++) 
+            {
+                sum += arr[i];
+                product *= arr[i];
+            }
+
+            return { sum: sum, product: product };
+        }
+
+        const integers = [1, 2, 3, 4, 5];
+        const result = sumAndProduct(integers);
+
+        document.write("Sum:", result.sum);
+        document.write("Product:", result.product);
+
+    </script>
+</body>
+
+</html>

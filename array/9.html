@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        function swap(str) 
+        {
+            let swappedString = '';
+            for (let i = 0; i < str.length; i++) 
+            {
+                if (str[i] === str[i].toUpperCase()) 
+                {
+                    swappedString += str[i].toLowerCase();
+                }
+                else 
+                {
+                    swappedString += str[i].toUpperCase();
+                }
+            }
+            return swappedString;
+        }
+
+        const str = 'The Quick Brown Fox';
+        const swappedstr = swap(str);
+
+        document.write("Original String:", str);
+        document.write("Swapped Case String:", swappedstr);
+
     </script>
 </body>
+
 </html>

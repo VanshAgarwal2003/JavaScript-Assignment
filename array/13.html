@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter item to be added" id="input1">
+    <button id="btn1" onclick="add()">Add</button>
+    <button id="btn2" onclick="display()">Display</button>
+    <script>
+        let array=[];
+        function add()
+        {
+            let ele=document.getElementById("input1").value;
+            array.push(ele);
+           alert('Item added');
+        }
+        function display()
+        {
+           for(let i=0;i<array.length;i++)
+           {
+              document.write(`<br>Element ${i} is ${array[i]}<br>`);
+           }
+        }
+
+    </script>
+</body>
+</html>
