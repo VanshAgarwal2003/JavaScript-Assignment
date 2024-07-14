@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let colors = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+        let ordinals = ["th", "st", "nd", "rd"];
+
+        for (let i = 0; i < colors.length; i++) {
+            let ordinal;
+            if (i + 1 >= 11 && i + 1 <= 13) {
+                ordinal = ordinals[0];
+            } else {
+                switch ((i + 1) % 10) {
+                    case 1:
+                        ordinal = ordinals[1];
+                        break;
+                    case 2:
+                        ordinal = ordinals[2];
+                        break;
+                    case 3:
+                        ordinal = ordinals[3];
+                        break;
+                    default:
+                        ordinal = ordinals[0];
+                }
+            }
+            document.write(`${i + 1}${ordinal} choice is ${colors[i].trim()}.<br>`);
+        }
+
+    </script>
+</body>
+
+</html>
