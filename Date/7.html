@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function is_weekend(dateString) {
+
+    const date = new Date(dateString);
+
+    
+    const dayOfWeek = date.getDay();
+
+   
+    return dayOfWeek === 0 || dayOfWeek === 6;
+}
+
+document.write(is_weekend('Nov 15, 2014')); 
+
+
+    </script>
+</body>
+</html>

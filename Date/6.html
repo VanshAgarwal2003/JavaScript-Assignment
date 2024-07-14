@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add_minutes(date, minutes) 
+        {
+            const newDate = new Date(date);
+            newDate.setMinutes(newDate.getMinutes() + minutes);
+            return newDate;
+        }
+
+        document.write(add_minutes(new Date(2014, 10, 2), 30).toString());
+
+    </script>
+</body>
+
+</html>
