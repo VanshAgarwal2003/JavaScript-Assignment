@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function remove(array) {
+            return array.filter(value => {
+                return value !== null &&
+                    value !== 0 &&
+                    value !== "" &&
+                    value !== false &&
+                    value !== undefined &&
+                    !Number.isNaN(value);
+            });
+        }
+
+        let sample = [NaN, 0, 15, false, -22, '', undefined, 47, null];
+        let filteredArray = remove(sample);
+
+        document.write(filteredArray);
+
+    </script>
+</body>
+
+</html>
