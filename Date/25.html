@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function full_month(date) {
+
+            const months = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+
+
+            return months[date.getMonth()];
+        }
+
+
+        const dt = new Date(2015, 10, 1);
+        console.log(full_month(dt));
+
+    </script>
+</body>
+
+</html>
