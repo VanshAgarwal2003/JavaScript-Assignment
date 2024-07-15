@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Get Attributes of a Link</title>
+    <script>
+        function getAttributes() {
+            // Get the link element by its ID
+            var link = document.getElementById("w3r");
+
+            // Get the attribute values
+            var href = link.getAttribute("href");
+            var hreflang = link.getAttribute("hreflang");
+            var rel = link.getAttribute("rel");
+            var target = link.getAttribute("target");
+            var type = link.getAttribute("type");
+
+            // Display the attribute values (you can modify this part as needed)
+            alert("href: " + href + "\nhreflang: " + hreflang + "\nrel: " + rel + "\ntarget: " + target + "\ntype: " + type);
+        }
+    </script>
+</head>
+
+<body>
+
+    <p><a id="w3r" type="text/html" hreflang="enus" rel="nofollow" target="_self"
+            href="http://www.w3resource.com/">w3resource</a></p>
+
+    <button onclick="getAttributes()">Click here to get attributes value</button>
+
+</body>
+
+</html>

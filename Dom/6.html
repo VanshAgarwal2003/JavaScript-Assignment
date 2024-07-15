@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Change the content of a cell</title>
+    <script>
+        function changeContent() {
+            // Get user input for row, column, and new content
+            var row = parseInt(prompt("Enter row number (1-based index):")) - 1; // Convert to 0-based index
+            var col = parseInt(prompt("Enter column number (1-based index):")) - 1; // Convert to 0-based index
+            var newContent = prompt("Enter new content:");
+
+            // Get the table element by its ID
+            var table = document.getElementById("myTable");
+
+            // Check if the specified row and column are within valid range
+            if (row >= 0 && row < table.rows.length && col >= 0 && col < table.rows[row].cells.length) {
+                // Update the content of the specified cell
+                table.rows[row].cells[col].innerHTML = newContent;
+            } else {
+                alert("Invalid row or column index. Please enter valid indices.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <table id="myTable" border="1">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+        <tr>
+            <td>Row3 cell1</td>
+            <td>Row3 cell2</td>
+        </tr>
+    </table>
+
+    <input type="button" onclick="changeContent()" value="Change content">
+
+</body>
+
+</html>
