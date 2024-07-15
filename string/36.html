@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function zeroFill(num, len, sign) {
+            let numStr = Math.abs(num).toString();
+            let zeros = len - numStr.length;
+            let zeroFilled = '';
+
+            for (let i = 0; i < zeros; i++) {
+                zeroFilled += '0';
+            }
+
+            zeroFilled += numStr;
+
+            if (sign === '+' || sign === '-') {
+                return (num < 0 ? sign + zeroFilled : '+' + zeroFilled);
+            }
+
+            return zeroFilled;
+        }
+
+        // Test data
+        console.log(zeroFill(120, 5, '-')); // "+00120"
+        console.log(zeroFill(29, 4)); // "0029"
+
+    </script>
+</body>
+
+</html>

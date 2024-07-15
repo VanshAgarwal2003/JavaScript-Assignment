@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function search_word(str, word) {
+            let count = str.split(word).length - 1;
+            return `'${word}' was found ${count} times.`;
+        }
+
+        // Test data
+        console.log(search_word('The quick brown fox', 'fox')); // "'fox' was found 1 times."
+        console.log(search_word('aa, bb, cc, dd, aa', 'aa')); // "'aa' was found 2 times."
+
+    </script>
+</body>
+
+</html>
