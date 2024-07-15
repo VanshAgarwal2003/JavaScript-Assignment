@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isHTML(str) {
+            // Regular expression to match HTML format
+            let regex = /<(?:[^>]+)>/;
+            return regex.test(str);
+        }
+
+        // Test data
+        console.log(isHTML('<p>Hello</p>')); // true
+        console.log(isHTML('<div class="container">Content</div>')); // true
+        console.log(isHTML('plain text')); // false
+
+    </script>
+</body>
+
+</html>

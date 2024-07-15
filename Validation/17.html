@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
- <script>
-    
- </script>
+    <script>
+        function isHexColor(str) {
+            // Regular expression to match hex color format (#rrggbb or #rgb)
+            let regex = /^#([0-9A-F]{3}){1,2}$/i;
+            return regex.test(str);
+        }
+
+        // Test data
+        console.log(isHexColor('#f00')); // true
+        console.log(isHexColor('#FF00ff')); // true
+        console.log(isHexColor('#123abc')); // true
+        console.log(isHexColor('123abc')); // false (missing #)
+        console.log(isHexColor('#12gabc')); // false (invalid characters)
+
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function containsAlphaDashUnderscore(str) {
+            // Regular expression to match alpha, dash, underscore
+            let regex = /^[a-zA-Z-_]+$/;
+            return regex.test(str);
+        }
+
+        // Test data
+        console.log(containsAlphaDashUnderscore('alpha_dash_underscore')); // true
+        console.log(containsAlphaDashUnderscore('alpha-dash')); // true
+        console.log(containsAlphaDashUnderscore('alpha_dash123')); // false (contains digits)
+        console.log(containsAlphaDashUnderscore('alpha dash')); // false (contains space)
+
+    </script>
+</body>
+
+</html>

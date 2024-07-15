@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isDomain(str) {
+            let regex = /^(http:\/\/|https:\/\/)?([a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.)+[a-zA-Z]{2,}$/i;
+            return regex.test(str);
+        }
+
+        // Test data
+        console.log(isDomain('https://www.example.com')); // true
+        console.log(isDomain('http://subdomain.example.co.uk')); // true
+        console.log(isDomain('invalid-domain')); // false
+        console.log(isDomain('example')); // false (missing TLD)
+
+    </script>
+</body>
+
+</html>
