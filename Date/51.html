@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getWeekEndDate(date) {
+            const day = date.getDay();
+            const diff = date.getDate() + (day === 0 ? 0 : 7 - day);
+            return new Date(date.setDate(diff));
+        }
+
+        // Test data
+        const dt = new Date("June 13, 2024");
+        console.log(getWeekEndDate(dt));
+
+    </script>
+</body>
+
+</html>
