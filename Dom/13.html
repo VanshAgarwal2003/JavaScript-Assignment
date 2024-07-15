@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Get Window Width and Height</title>
+    <script>
+        window.addEventListener("resize", function () {
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            document.getElementById("dimensions").textContent = "Window Width: " + width + "px, Height: " + height + "px";
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>Get Window Width and Height</h2>
+
+    <p id="dimensions">Window Width: 0 px, Height: 0 px</p>
+
+</body>
+
+</html>
