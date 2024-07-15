@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function abbrev_name(name) {
+            let parts = name.split(' ');
+            if (parts.length > 1) {
+                return `${parts[0]} ${parts[1][0]}.`;
+            }
+            return name;
+        }
+
+        // Test data
+        console.log(abbrev_name("Robin Singh")); // "Robin S."
+
+    </script>
+</body>
+
+</html>

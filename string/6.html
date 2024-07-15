@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function protect_email(email) {
+            let [user, domain] = email.split('@');
+            return `${user.slice(0, user.length / 2)}...@${domain}`;
+        }
+
+        // Test data
+        console.log(protect_email("robin_singh@example.com")); // "robin...@example.com"
+
+    </script>
+</body>
+
+</html>

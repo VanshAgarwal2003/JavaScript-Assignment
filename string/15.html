@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function humanize_format(number) {
+            if (number === undefined) return '';
+
+            let suffix = 'th';
+            if (number % 100 >= 11 && number % 100 <= 13) {
+                suffix = 'th';
+            } else {
+                switch (number % 10) {
+                    case 1: suffix = 'st'; break;
+                    case 2: suffix = 'nd'; break;
+                    case 3: suffix = 'rd'; break;
+                }
+            }
+            return number + suffix;
+        }
+
+        // Test data
+        console.log(humanize_format());      // ""
+        console.log(humanize_format(1));     // "1st"
+        console.log(humanize_format(8));     // "8th"
+        console.log(humanize_format(301));   // "301st"
+        console.log(humanize_format(402));   // "402nd"
+
+    </script>
+</body>
+
+</html>

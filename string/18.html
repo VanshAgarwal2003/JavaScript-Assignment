@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function count(str, substr, caseSensitive = true) {
+            if (!caseSensitive) {
+                str = str.toLowerCase();
+                substr = substr.toLowerCase();
+            }
+            return str.split(substr).length - 1;
+        }
+
+        // Test data
+        console.log(count("The quick brown fox jumps over the lazy dog", 'the')); // 2
+        console.log(count("The quick brown fox jumps over the lazy dog", 'fox', false)); // 1
+
+    </script>
+</body>
+
+</html>

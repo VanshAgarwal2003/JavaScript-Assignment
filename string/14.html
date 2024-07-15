@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function insert(mainString, insertString = '', position = 1) {
+            if (position > mainString.length) {
+                position = mainString.length + 1;
+            }
+            return mainString.slice(0, position - 1) + insertString + mainString.slice(position - 1);
+        }
+
+        // Test data
+        console.log(insert('We are doing some exercises.'));                     // "We are doing some exercises."
+        
+    </script>
+</body>
+
+</html>
