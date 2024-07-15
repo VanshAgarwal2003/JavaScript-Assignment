@@ -9,14 +9,13 @@
 
 <body>
     <script>
-        function timezone_offset_in_seconds(date) {
-            const offsetMinutes = date.getTimezoneOffset();
-            return offsetMinutes * 60;
+        function add_weeks(date, weeks) {
+            return new Date(date.setDate(date.getDate() + (weeks * 7)));
         }
 
 
-        const dt = new Date();
-        console.log(timezone_offset_in_seconds(dt));
+        const dt2 = new Date(2014, 10, 2);
+        console.log(add_weeks(dt2, 10).toString());
 
     </script>
 </body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add_months(date, months) {
+            const newMonth = date.getMonth() + months;
+            const newYear = date.getFullYear() + Math.floor(newMonth / 12);
+            const remainingMonths = newMonth % 12;
+            const newDate = new Date(date);
+            newDate.setFullYear(newYear);
+            newDate.setMonth(remainingMonths);
+            return newDate;
+        }
+
+
+        const dt3 = new Date(2014, 10, 2);
+        console.log(add_months(dt3, 10).toString());
+
+    </script>
+</body>
+
+</html>

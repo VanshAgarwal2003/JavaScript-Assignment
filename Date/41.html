@@ -9,14 +9,13 @@
 
 <body>
     <script>
-        function timezone_offset_in_seconds(date) {
-            const offsetMinutes = date.getTimezoneOffset();
-            return offsetMinutes * 60;
+        function add_years(date, years) {
+            return new Date(date.setFullYear(date.getFullYear() + years));
         }
 
 
-        const dt = new Date();
-        console.log(timezone_offset_in_seconds(dt));
+        const dt1 = new Date(2014, 10, 2);
+        console.log(add_years(dt1, 10).toString());
 
     </script>
 </body>
