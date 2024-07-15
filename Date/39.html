@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function diff_to_GMT(date) {
+            const offsetMinutes = date.getTimezoneOffset();
+            const offsetHours = Math.abs(offsetMinutes / 60);
+
+            const sign = offsetMinutes < 0 ? '+' : '-';
+            const hours = String(Math.floor(offsetHours)).padStart(2, '0');
+            
+            const minutes = String(Math.abs(offsetMinutes % 60)).padEnd(2, '0');
+            return `${sign}${hours}.${minutes}`;
+        }
+
+
+        const dt = new Date();
+        console.log(diff_to_GMT(dt));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isDaylightSavingTime(date) 
+        {
+            const januaryOffset = new Date(date.getFullYear(), 0, 1).getTimezoneOffset();
+            const julyOffset = new Date(date.getFullYear(), 6, 1).getTimezoneOffset();
+
+            return januaryOffset !== julyOffset;
+        }
+
+        const dt = new Date();
+        console.log(isDaylightSavingTime(dt) ? 1 : 0);
+
+    </script>
+</body>
+
+</html>

@@ -9,18 +9,17 @@
 
 <body>
     <script>
-        function minutes_with_leading_zeros(date) {
+        function seconds_with_leading_zeros(date) {
 
-            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
 
 
-            return String(minutes).padStart(2, '0');
+            return String(seconds).padStart(2, '0');
         }
 
 
         const dt = new Date(1989, 10, 1);
-        console.log(minutes_with_leading_zeros(dt));
-
+        console.log(seconds_with_leading_zeros(dt));
 
 
     </script>
