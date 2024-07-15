@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function case_insensitive_search(str, subStr) {
+            let regex = new RegExp(subStr, 'i');
+            return regex.test(str) ? 'Matched' : 'Not Matched';
+        }
+
+        // Test data
+        console.log(case_insensitive_search('JavaScript Exercises', 'exercises')); // "Matched"
+        console.log(case_insensitive_search('JavaScript Exercises', 'Exercises')); // "Matched"
+        console.log(case_insensitive_search('JavaScript Exercises', 'Exercisess')); // "Not Matched"
+
+    </script>
+</body>
+
+</html>
