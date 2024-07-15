@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function internet_time(date) {
+            
+            const utcHours = date.getUTCHours();
+            const utcMinutes = date.getUTCMinutes();
+            const utcSeconds = date.getUTCSeconds();
+
+
+            const totalSeconds = (utcHours * 3600) + (utcMinutes * 60) + utcSeconds;
+            const bmtSeconds = totalSeconds + 3600;
+            const beats = Math.floor((bmtSeconds % 86400) / 86.4);
+
+
+            return String(beats).padStart(3, '0');
+        }
+
+
+        const dt = new Date(1989, 10, 1);
+        console.log(internet_time(dt));
+
+    </script>
+</body>
+
+</html>

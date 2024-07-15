@@ -9,17 +9,19 @@
 
 <body>
     <script>
-        function short_year(date) {
+        function getMeridiem(date) {
 
-            const fullYear = date.getFullYear();
+            const hours = date.getHours();
 
-
-            return fullYear.toString().slice(-2);
+            return hours < 12 ? 'am' : 'pm';
         }
 
 
-        const dt = new Date(1989, 10, 1);
-        console.log(short_year(dt));
+        const dt1 = new Date('July 13, 2024 07:30:00');
+
+
+        console.log(getMeridiem(dt1));
+
 
     </script>
 </body>
