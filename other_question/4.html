@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Local to UTC Time</title>
+</head>
+
+<body>
+    <h1>Convert Local Time to UTC</h1>
+    <button onclick="convertToUTC()">Show UTC Time</button>
+    <p id="utcTime"></p>
+    <button onclick="startTimer()">Start Timer</button>
+    <p id="timer"></p>
+    <script>
+        function convertToUTC() {
+            let now = new Date();
+            document.getElementById('utcTime').innerText = now.toUTCString();
+        }
+
+        function startTimer() {
+            setTimeout(() => {
+                document.getElementById('timer').innerText = new Date().toLocaleString();
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>

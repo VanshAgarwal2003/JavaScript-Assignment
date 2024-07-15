@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slideshow with Navigation</title>
+</head>
+<body>
+    <img id="slideshow" src="image1.jpg" alt="Slideshow Image" width="500">
+    <br>
+    <button id="backBtn" onclick="showPreviousImage()" style="display: none;">Back</button>
+    <button id="forwardBtn" onclick="showNextImage()">Forward</button>
+    <script>
+        let images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg"];
+        let currentIndex = 0;
+
+        function showNextImage() {
+            currentIndex++;
+            if (currentIndex >= images.length - 1) {
+                document.getElementById("forwardBtn").style.display = "none";
+            } else {
+                document.getElementById("forwardBtn").style.display = "inline";
+            }
+            document.getElementById("backBtn").style.display = "inline";
+            document.getElementById("slideshow").src = images[currentIndex];
+        }
+
+        function showPreviousImage() {
+            currentIndex--;
+            if (currentIndex <= 0) {
+                document.getElementById("backBtn").style.display = "none";
+            } else {
+                document.getElementById("backBtn").style.display = "inline";
+            }
+            document.getElementById("forwardBtn").style.display = "inline";
+            document.getElementById("slideshow").src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>

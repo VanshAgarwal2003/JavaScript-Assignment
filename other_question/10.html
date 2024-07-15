@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Animation with Pause on Hover</title>
+    <style>
+        .marble {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="marble" class="marble"></div>
+    <script>
+        let marble = document.getElementById('marble');
+        let animationId;
+        let pos = 0;
+        let direction = 1;
+
+        function animateMarble() {
+            pos += direction * 5;
+            if (pos >= window.innerWidth - 50 || pos <= 0) {
+                direction *= -1;
+            }
+            marble.style.left = pos + 'px';
+            animationId = setTimeout(animateMarble, 100);
+        }
+
+        marble.onmouseover = function() {
+            clearTimeout(animationId);
+        };
+
+        marble.onmouseout = function() {
+            animateMarble();
+        };
+
+        animateMarble();
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slideshow</title>
+</head>
+<body>
+    <img id="slideshow" src="image1.jpg" alt="Slideshow Image" width="500">
+    <script>
+        let images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg"];
+        let currentIndex = 0;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById("slideshow").src = images[currentIndex];
+        }
+
+        setInterval(showNextImage, 2000); 
+    </script>
+</body>
+</html>
