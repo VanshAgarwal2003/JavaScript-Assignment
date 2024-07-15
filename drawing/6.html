@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Draw Diagonal Pattern of Circles</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid black;"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        var numRows = 10; // Number of rows of circles
+        var circleSize = 30; // Diameter of each circle
+
+        // Loop through rows
+        for (var i = 0; i < numRows; i++) {
+            // Calculate starting position for each row
+            var startX = i * circleSize;
+
+            // Loop through columns
+            for (var j = 0; j < numRows - i; j++) {
+                // Calculate circle center position
+                var x = startX + j * circleSize;
+                var y = j * circleSize;
+
+                // Alternate colors based on diagonal pattern
+                if ((i + j) % 2 === 0) {
+                    ctx.fillStyle = "white"; // White circle
+                } else {
+                    ctx.fillStyle = "black"; // Black circle
+                }
+
+                // Draw circle
+                ctx.beginPath();
+                ctx.arc(x, y, circleSize / 2, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
