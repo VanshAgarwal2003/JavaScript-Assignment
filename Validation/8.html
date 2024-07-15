@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countVowels(str) {
+            // Using a regular expression to match vowels
+            let matches = str.match(/[aeiou]/gi);
+            return matches ? matches.length : 0;
+        }
+
+        // Test data
+        console.log(countVowels('United States')); // 5 (U, i, e, a, e)
+        console.log(countVowels('Hello World')); // 3 (e, o, o)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isUKPostcode(str) {
+            // Regular expression to match UK postcode format
+            let regex = /^[A-Z]{1,2}\d{1,2}[A-Z]?\s*\d[A-Z]{2}$/i;
+            return regex.test(str);
+        }
+
+        // Test data
+        console.log(isUKPostcode('SW1A 1AA')); // true
+        console.log(isUKPostcode('EC1A 1BB')); // true
+        console.log(isUKPostcode('W12 7RJ')); // true
+        console.log(isUKPostcode('12 AB')); // false (invalid format)
+
+    </script>
+</body>
+
+</html>

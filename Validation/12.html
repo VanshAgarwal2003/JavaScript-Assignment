@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isUSZipCode(str) {
+            // Regular expression to match US ZIP code format
+            let regex = /^\d{5}(-\d{4})?$/;
+            return regex.test(str);
+        }
+
+        // Test data
+        console.log(isUSZipCode('12345')); // true
+        console.log(isUSZipCode('12345-6789')); // true
+        console.log(isUSZipCode('123456')); // false (too many digits)
+
+    </script>
+</body>
+
+</html>
