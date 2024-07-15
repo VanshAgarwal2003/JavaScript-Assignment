@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function thousands_separators(num) {
+            let str = num.toString();
+        
+            let parts = str.split('.');
+           
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+           
+            return parts.join('.');
+        }
+
+
+        console.log(thousands_separators(1000));  
+        
+
+    </script>
+</body>
+
+</html>
