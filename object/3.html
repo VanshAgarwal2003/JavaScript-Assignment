@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Sample object
+        var student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+
+        // Function to get object length
+        function getObjectLength(obj) {
+            // Get keys of the object
+            var keys = Object.keys(obj);
+
+            // Return the length of keys array
+            return keys.length;
+        }
+
+        // Get length of the sample object
+        var length = getObjectLength(student);
+        console.log("Length of the object:", length); // Output: Length of the object: 3
+
+    </script>
+</body>
+
+</html>

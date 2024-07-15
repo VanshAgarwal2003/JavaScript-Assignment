@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Sample library array of books
+        var library = [
+            {
+                author: 'Bill Gates',
+                title: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                author: 'Suzanne Collins',
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                readingStatus: false
+            }
+        ];
+
+        function displayReadingStatus(library) {
+        
+            for (var i = 0; i < library.length; i++) {
+                var book = library[i];
+
+                console.log("Book name:", book.title);
+                console.log("Author:", book.author);
+                console.log("Reading status:", book.readingStatus ? "Currently reading" : "Not yet read");
+                console.log("--------------------");
+            }
+        }
+
+        displayReadingStatus(library);
+
+    </script>
+</body>
+
+</html>

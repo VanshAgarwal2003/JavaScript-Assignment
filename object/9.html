@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Circle class with methods to calculate area and perimeter
+        class Circle {
+            constructor(radius) {
+                this.radius = radius;
+            }
+
+            // Method to calculate area of the circle
+            calculateArea() {
+                return Math.PI * Math.pow(this.radius, 2);
+            }
+
+            // Method to calculate perimeter (circumference) of the circle
+            calculatePerimeter() {
+                return 2 * Math.PI * this.radius;
+            }
+        }
+
+        // Example usage:
+        var radius = 5;
+        var circle = new Circle(radius);
+        var area = circle.calculateArea().toFixed(2);
+        var perimeter = circle.calculatePerimeter().toFixed(2);
+
+        console.log("Radius:", radius);
+        console.log("Area of the circle:", area); // Output: Area of the circle: 78.54
+        console.log("Perimeter of the circle:", perimeter); // Output: Perimeter of the circle: 31.42
+
+    </script>
+</body>
+
+</html>

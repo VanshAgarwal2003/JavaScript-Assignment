@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Sample array of objects
+        var library = [
+            {
+                title: 'The Road Ahead',
+                author: 'Bill Gates',
+                libraryID: 1254
+            },
+            {
+                title: 'Walter Isaacson',
+                author: 'Steve Jobs',
+                libraryID: 4264
+            },
+            {
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                author: 'Suzanne Collins',
+                libraryID: 3245
+            }
+        ];
+
+        // Function to sort library array by libraryID
+        function sortByLibraryID(arr) {
+            // Use Array.sort() with a custom comparator function
+            arr.sort(function (a, b) {
+                return b.libraryID - a.libraryID; // Sort descending by libraryID
+            });
+            return arr;
+        }
+
+        // Sort library array by libraryID
+        var sortedLibrary = sortByLibraryID(library);
+        console.log(sortedLibrary);
+
+    </script>
+</body>
+
+</html>

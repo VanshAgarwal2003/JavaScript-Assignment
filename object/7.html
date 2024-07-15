@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function subsetsOfString(str) {
+            var result = [];
+            for (var i = 0; i < str.length; i++) {
+                for (var j = i + 1; j <= str.length; j++) {
+                    result.push(str.slice(i, j));
+                }
+            }
+            return result;
+        }
+
+        // Example usage:
+        var str = "dog";
+        var subsets = subsetsOfString(str);
+        console.log(subsets); // Output: ["d", "do", "dog", "o", "og", "g"]
+
+    </script>
+</body>
+
+</html>
