@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Highlight Bold Words</title>
+    <script>
+        function highlightBoldWords() {
+            // Get all bold elements within the paragraph
+            var boldElements = document.querySelectorAll("p strong, p b");
+
+            // Apply styling to each bold element
+            boldElements.forEach(function (element) {
+                element.style.color = "blue";
+                element.style.fontWeight = "bold";
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <p>We have just started this section for the users (beginner to intermediate) who want to work with various
+        JavaScript problems and write scripts online to test their JavaScript skill.</p>
+
+    <p>
+        <a href="#" onmouseover="highlightBoldWords()">On mouse over here bold words of the following paragraph will be
+            highlighted</a>
+    </p>
+
+</body>
+
+</html>

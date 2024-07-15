@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Create Table with User Input</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+    <script>
+        function createTable() {
+            // Prompt the user for number of rows and columns
+            var rows = parseInt(prompt("Enter number of rows:"));
+            var cols = parseInt(prompt("Enter number of columns:"));
+
+            // Get the table element by its ID
+            var table = document.getElementById("myTable");
+
+            // Clear previous table content, if any
+            table.innerHTML = '';
+
+            // Create rows and cells based on user input
+            for (var i = 0; i < rows; i++) {
+                var row = table.insertRow();
+                for (var j = 0; j < cols; j++) {
+                    var cell = row.insertCell();
+                    // Set cell content to its row-column number
+                    cell.textContent = "Row-" + i + " Column-" + j;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <table id="myTable" border="1">
+        <!-- Table will be generated dynamically -->
+    </table>
+
+    <input type="button" onclick="createTable()" value="Create the table">
+
+</body>
+
+</html>

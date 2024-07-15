@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Count and display items of a dropdown list</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+    </style>
+    <script>
+        function getOptions() {
+            // Get the select element by its ID
+            var select = document.getElementById("mySelect");
+
+            // Get the number of options
+            var count = select.options.length;
+
+            // Prepare the message to display
+            var message = "Total items: " + count + "\n\n";
+
+            // Loop through options and add them to the message
+            for (var i = 0; i < count; i++) {
+                message += (i + 1) + ". " + select.options[i].textContent + "\n";
+            }
+
+            // Display the message in an alert window
+            alert(message);
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        Select your favorite Color :
+        <select id="mySelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>White</option>
+        </select>
+        <br>
+        <input type="button" onclick="getOptions()" value="Count and Output all items">
+    </form>
+
+</body>
+
+</html>

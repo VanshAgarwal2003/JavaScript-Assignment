@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Display Random Image</title>
+    <script>
+        function displayRandomImage() {
+            // Array of image information objects
+            var images = [
+                { src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg", width: "240", height: "160" },
+                { src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg", width: "320", height: "195" },
+                { src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg", width: "500", height: "343" }
+            ];
+
+            // Get a random index from the images array
+            var randomIndex = Math.floor(Math.random() * images.length);
+
+            // Get the image element by its ID
+            var imgElement = document.getElementById("randomImage");
+
+            // Update the image source, width, and height
+            imgElement.src = images[randomIndex].src;
+            imgElement.width = images[randomIndex].width;
+            imgElement.height = images[randomIndex].height;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Display Random Image</h2>
+
+    <img id="randomImage" src="" alt="Random Image">
+    <br>
+    <button onclick="displayRandomImage()">Display Random Image</button>
+
+</body>
+
+</html>
