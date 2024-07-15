@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function repeat_string(str, count) {
+            if (typeof str !== 'string' || typeof count !== 'number' || count < 0) {
+                return "Error in string or count.";
+            }
+            return str.repeat(count);
+        }
+
+        // Test data
+        console.log(repeat_string('a', 4)); // "aaaa"
+        console.log(repeat_string('a'));    // "Error in string or count."
+
+    </script>
+</body>
+
+</html>

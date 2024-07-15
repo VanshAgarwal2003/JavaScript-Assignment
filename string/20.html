@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        function formatted_string(pad, str, padLeft) {
+            if (typeof str === 'undefined') {
+                return pad;
+            }
+            if (padLeft) {
+                return (pad + str).slice(-pad.length);
+            } else {
+                return (str + pad).substring(0, pad.length);
+            }
+        }
+
+        // Test data
+        console.log(formatted_string('0000', 123, 'l')); // "0123"
+        console.log(formatted_string('00000000', 123, '')); // "12300000"
+
     </script>
 </body>
+
 </html>
