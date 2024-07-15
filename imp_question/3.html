@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var favoriteRecipe = {
+            title: "Mole",
+            servings: 2,
+            ingredients: ["cinnamon", "cumin", "cocoa"]
+        };
+
+        console.log(favoriteRecipe.title);
+        console.log("Serves: " + favoriteRecipe.servings);
+        console.log("Ingredients:");
+        
+        for (var i = 0; i < favoriteRecipe.ingredients.length; i++) {
+            console.log(favoriteRecipe.ingredients[i]);
+        }
+
+    </script>
+</body>
+
+</html>
