@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findDateInString(str) {
+
+            let regex = /\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/g;
+            let matches = str.match(regex);
+            return matches ? matches : [];
+        }
+
+
+        console.log(findDateInString("Meeting on 10/15/2023 and 11/20/2023")); 
+        console.log(findDateInString("No dates here.")); 
+
+    </script>
+</body>
+
+</html>
